@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AetherLoad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- ======================================================================= -->
+    <!-- TODO: PASTE YOUR PUBLISHER ID IN THE LINE BELOW (Look for ca-pub-...) -->
+    <!-- ======================================================================= -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              vite: {
+                dark: '#0a0a0c',     /* Deeper Black */
+                surface: '#161618',  /* Slightly lighter for cards */
+                light: '#24242e',
+                purple: '#747bff',   /* Brighter Purple */
+                blue: '#5eb1ef',     /* Brighter Blue */
+                cyan: '#2dd4bf',     /* New Cyan Accent */
+                pink: '#ec4899',     /* Pink for scrollbar */
+              }
+            },
+            animation: {
+              'gradient-x': 'gradient-x 15s ease infinite',
+              'float': 'float 8s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'progress': 'progress 1.5s ease-out forwards',
+            },
+            keyframes: {
+              'gradient-x': {
+                '0%, 100%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'left center'
+                },
+                '50%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'right center'
+                },
+              },
+              'float': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'progress': {
+                '0%': { width: '0%' },
+                '100%': { width: '100%' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0a0a0c;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+      .vite-gradient-text {
+        background: linear-gradient(315deg, #2dd4bf 0%, #747bff 50%, #5eb1ef 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% auto;
+        animation: textShine 5s ease-in-out infinite alternate;
+      }
+      @keyframes textShine {
+        to {
+          background-position: 200% center;
+        }
+      }
+      .glass-panel {
+        background: rgba(22, 22, 24, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      
+      /* --- Custom Pink Scrollbar (Permanent) --- */
+      
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #0a0a0c; 
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #ec4899, #d946ef); 
+        border-radius: 5px;
+        border: 2px solid #0a0a0c;
+        background-clip: padding-box;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #db2777, #c026d3); 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

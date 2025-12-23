@@ -1,0 +1,5 @@
+{
+  "name": "AetherLoad",
+  "description": "A sleek, modern media downloader for YouTube and Instagram with a Vite-inspired theme, powered by Gemini for link analysis.",
+  "requestFramePermissions": []
+}
